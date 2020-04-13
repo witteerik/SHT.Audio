@@ -86,11 +86,18 @@ Public Class Sound
             Return _Box
         End Get
         Set(value As Object)
-            'Setting the current box type
-            CurrentBoxType = value.GetType
 
-            'Storing the value
-            _Box = value
+            If value Is Nothing Then
+                'Setting both _Box and CurrentBoxType to nothing
+                CurrentBoxType = Nothing
+                _Box = Nothing
+            Else
+                'Setting the current box type
+                CurrentBoxType = value.GetType
+
+                'Storing the value
+                _Box = value
+            End If
         End Set
     End Property
 
