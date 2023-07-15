@@ -26,7 +26,6 @@ Imports System.Runtime.InteropServices
 Imports System.Threading
 Imports SHT.Audio.DuplexPlayer.PortAudioVB
 
-
 Public Interface ISoundPlayerControl
     Sub MessageFromPlayer(ByRef Message As MessagesFromSoundPlayer)
 
